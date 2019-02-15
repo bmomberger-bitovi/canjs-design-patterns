@@ -147,6 +147,9 @@ Component.extend({
     //	  setVal(foo + 1);
     //    return setVal;
     // }
+    // In this case, if you need to do something to a compute
+    //  when it's added to the view model, I recommend using
+    //  a setter instead of a getter.  Setters avoid this problem.
     // Or if you just need to set the initial value once,
     //  you can do it in init() or connectedCallback, as
     //  done below
