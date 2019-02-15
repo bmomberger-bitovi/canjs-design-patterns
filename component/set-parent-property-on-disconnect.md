@@ -141,11 +141,11 @@ Component.extend({
     // ObservationRecorder.ignore, like this:
     // 	get(setVal){
     //    let foo;
-		//		ObservationRecorder.ignore(() => {
-		//			foo = setVal();
-		//		})();
-		//	  setVal(foo + 1);
-		//		return setVal;
+    //    ObservationRecorder.ignore(() => {
+    //      foo = setVal();
+    //    })();
+    //	  setVal(foo + 1);
+    //    return setVal;
     // }
     // Or if you just need to set the initial value once,
     //  you can do it in init() or connectedCallback, as
