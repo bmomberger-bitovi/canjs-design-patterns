@@ -6,7 +6,8 @@ You may want to incrementally upgrade an old CanJS 2.x application using EJS as 
 
 ## Solution
 
-First, register Stache as a template renderer in can-legacy-view-helpers
+First, register Stache as a template renderer in can-legacy-view-helpers.  This code is copied from CanJS 2.3's stache engine;
+in 3.x and later it is it no longer part of can-stache, so you have to add it into your app manually.
 
 ```js
 import view from "can-legacy-view-helpers/view";
