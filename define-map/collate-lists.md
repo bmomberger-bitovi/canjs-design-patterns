@@ -7,8 +7,10 @@ import DefineMap from 'can-define/map/'
 import MyModel from '~/models/my-model';
 
 DefineMap.extend("ListCollator", {
-  get listOfItems(lastSet, resolve) {
-    return MyModel.getList({}).then(resolve);
+  listOfItems: {
+    get(lastSet, resolve) {
+      return MyModel.getList({}).then(resolve);
+    }
   },
 
   get collatedList() {
