@@ -7,12 +7,12 @@ import DefineMap from 'can-define/map/'
 import MyModel from '~/models/my-model';
 
 DefineMap.extend("ListCollator", {
-  get listOfItems() {
-    return MyModel.getList({});
+  get listOfItems(lastSet, resolve) {
+    return MyModel.getList({}).then(resolve);
   },
 
   get collatedList() {
-    return this.listOfItems.reduce((a, b) => {
+    return this.listOfItems && this.listOfItems.reduce((a, b) => {
       let collationList = a.get(b.collationProperty);
       if(!collationList) {
         collationList = [];
